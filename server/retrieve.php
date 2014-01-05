@@ -2,7 +2,7 @@
 
   $root = isset($_POST['root']) ? $_POST['root'] : '.';
   $path = '../../' . $root;
-  $ignored_directories = array('.', '..', 'forbidden', 'restricted', 'xampp', 'localhost-webapps', 'codeigniter', 'my-libraries');
+  $ignored_directories = array('.', '..', 'forbidden', 'restricted', 'xampp');
   $apps = array();
 
   if ($handle = opendir($path)) {
