@@ -9,11 +9,14 @@
 <body>
   <div class="wrapper">
     <h1>Localhost WebApps</h1>
-    <input type="text" placeholder="Search WebApp" autofocus="autofocus" data-ng-model="appName" />
+    <input type="text" placeholder="Search WebApp" data-ng-model="appName" />
 
     <ul class="apps" data-ng-controller="AppsController">
       <li data-ng-repeat="app in apps | filter: appName">
-        <a href="http://localhost/{{app}}"><span>localhost/</span>{{app}}</a>
+        <a href="http://localhost/{{app}}">
+          {{app}}
+          <span class="ignore" title="Ignore" data-ng-click="ignore($event, $index)"></span>
+        </a>
       </li>
     </ul>
   </div>

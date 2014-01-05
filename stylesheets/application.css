@@ -12,7 +12,7 @@ body {
 }
 
 .wrapper {
-  width: 50%;
+  width: 55%;
   margin: 0 auto;
   padding: 50px 0;
 }
@@ -70,12 +70,35 @@ input[type="text"] {
   font: normal 2.1rem "Open Sans Light";
   color: #cccccc;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 5px 38px 5px 10px;
   outline: none;
   border-radius: 3px;
+  position: relative;
 }
 
-.apps li a span {
-  font-size: 1.6rem;
+.apps li a:before {
+  content: "localhost/";
+  font: normal 1.6rem "Open Sans Light";
   color: #777777;
+}
+
+.apps li a .ignore {
+  display: none;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 26px;
+  height: 26px;
+  background: url("../images/ignore.png") center center no-repeat;
+  background-size: 75% 75%;
+  opacity: 0.3;
+}
+
+.apps li a .ignore:hover {
+  opacity: 1.0;
+}
+
+.apps li a:hover .ignore,
+.apps li a:focus .ignore {
+  display: block;
 }
