@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="localhost" data-ng-csp="">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="stylesheets/application.css" />
+  <title>Localhost WebApps</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Localhost WebApps</h1>
+    <input type="text" placeholder="Search WebApp" autofocus="autofocus" data-ng-model="appName" />
+
+    <ul class="apps" data-ng-controller="AppsController">
+      <li data-ng-repeat="app in apps | filter: appName">
+        <a href="http://localhost/{{app}}"><span>localhost/</span>{{app}}</a>
+      </li>
+    </ul>
+  </div>
+
+  <script src="javascripts/angular.min.js"></script>
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/application.js"></script>
+</body>
+</html>

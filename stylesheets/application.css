@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #222222;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+h1 {
+  float: left;
+  width: 50%;
+  font: normal 2.8rem "Open Sans Light";
+  color: #cccccc;
+  margin-bottom: 25px;
+  padding-left: 8px;
+}
+
+input[type="text"] {
+  float: right;
+  width: 35%;
+  font: normal 1.4rem "Open Sans Light";
+  color: #aaaaaa;
+  border: 1px solid #151515;
+  border-radius: 3px;
+  background-color: #1a1a1a;
+  padding: 5px 7px;
+  margin-top: 7px;
+  outline: none;
+}
+
+.apps {
+  list-style: none;
+}
+
+.apps:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.apps li {
+  float: right;
+  clear: right;
+  width: 49%;
+}
+
+.apps li:nth-of-type(odd) {
+  float: left;
+  clear: left;
+}
+
+.apps li:hover a,
+.apps li a:focus {
+  background-color: #1a1a1a;
+}
+
+.apps li a {
+  display: block;
+  font: normal 2.1rem "Open Sans Light";
+  color: #cccccc;
+  text-decoration: none;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 3px;
+}
+
+.apps li a span {
+  font-size: 1.6rem;
+  color: #777777;
+}
