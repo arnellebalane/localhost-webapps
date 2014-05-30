@@ -3,6 +3,16 @@ var app = angular.module('localhost', []);
 app.controller('AppsController', function($scope, $http) {
   $scope.apps = [];
   $scope.ignored = [];
+
+  $scope.search = function(item) {
+    if ($scope.name) {
+      var q = $scope.name;
+      var regex = new RegExp('(^' + q + '| ' + q + '|\-' + q + ')');
+      return item.match(regex);
+    }
+    return true;
+  }
+
   $scope.ignore = function(event, index) {
     event.preventDefault();
     $scope.ignored.push($scope.apps[index]);
